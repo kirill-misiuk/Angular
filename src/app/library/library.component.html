@@ -1,0 +1,16 @@
+<h2>Library List</h2>
+
+<ng-template [ngIf]="loading" [ngIfElse]="loading">
+  <ul>
+    <li *ngFor="let library of libraries">
+      <h1>-----------</h1>
+      <p> {{library._id}}</p>
+      <p> {{library.name}}</p>
+      <button (click)="delete([library._id])">X</button>
+    </li>
+    <h1>-----------</h1>
+
+  </ul>
+</ng-template>
+<ng-template #loading><h1>...loading</h1></ng-template>
+
